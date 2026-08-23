@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Truco Online - Definitive Edition</title>
+  <link rel="stylesheet" href="styles.css?v=3" />
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img class="navbar-logo" src="asset2.png" alt="Logo" />
+        Truco Online
+      </a>
+      <ul class="nav-links" id="nav-links" hidden>
+        <li><a href="/api/game/" class="nav-link" data-seccion="jugar">Jugar</a></li>
+        <li><a href="#" class="nav-link" data-seccion="tienda">Tienda</a></li>
+        <li><a href="#" class="nav-link" data-seccion="contacto">Contacto</a></li>
+        <li><a href="#" class="nav-link" data-seccion="perfil">Mi Perfil</a></li>
+      </ul>
+      <div id="nav-user" class="nav-user"></div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Vista de autenticación -->
+    <section id="auth-view">
+      <img class="auth-logo" src="/api/asset2.png" alt="Truco Online" />
+      <form class="card login-form" id="login-card">
+        <h2 class="login-title">Iniciar Sesión</h2>
+        <input class="input" id="login-usuario" type="text" placeholder="Usuario" autocomplete="username" />
+        <input class="input" id="login-contrasena" type="password" placeholder="Contraseña" autocomplete="current-password" />
+        <button class="btn-modern" id="login-btn" type="submit">Entrar</button>
+        <p class="login-link">¿No tienes cuenta? <a href="#" id="show-register">Regístrate</a></p>
+        <div class="alert" id="login-msg" hidden></div>
+      </form>
+
+      <form class="card registro-form" id="register-card" hidden>
+        <h2 class="login-title">Crear Cuenta</h2>
+        <input class="input" id="register-usuario" type="text" placeholder="Usuario" autocomplete="username" />
+        <input class="input" id="register-contrasena" type="password" placeholder="Contraseña" autocomplete="new-password" />
+        <p class="avatar-label">Elige tu foto de perfil</p>
+        <div class="avatar-grid" id="register-avatars"></div>
+        <button class="btn-modern" id="register-btn" type="submit">Registrarme</button>
+        <p class="login-link">¿Ya tienes cuenta? <a href="#" id="show-login">Inicia sesión</a></p>
+        <div class="alert" id="register-msg" hidden></div>
+      </form>
+    </section>
+
+    <!-- Vista de usuario logueado -->
+    <section id="dashboard" hidden>
+      <!-- Tienda / Donaciones -->
+      <div id="seccion-tienda" class="seccion" hidden>
+        <h2 class="login-title">Tienda</h2>
+        <p class="section-subtitle">(a través de Mercado Pago)</p>
+        <p class="section-subtitle">Avatares premium</p>
+        <div class="store-grid" id="store-avatars"></div>
+
+        <p class="section-subtitle">Próximamente</p>
+        <div class="store-grid" id="store-premium"></div>
+
+        <div class="donations">
+          <p class="section-subtitle">Donaciones</p>
+          <p class="donations-text">¿Te gusta el juego? Ayudame a seguir desarrollándolo.</p>
+          <div class="donations-buttons">
+            <button class="btn-modern" data-donar="200">Donar $200</button>
+            <button class="btn-modern" data-donar="2000">Donar $2000</button>
+            <button class="btn-modern" data-donar="20000">Donar $20000</button>
+          </div>
+        </div>
+        <div class="alert" id="tienda-msg" hidden></div>
+      </div>
+
+      <!-- Contacto -->
+      <div id="seccion-contacto" class="seccion" hidden>
+        <div class="card contact-card">
+          <h2 class="login-title">Contacto</h2>
+          <div class="contact-body">
+            <img class="contact-photo" src="developers/1.png" alt="Ismael Lucas Becker" />
+            <div class="contact-info">
+              <p class="contact-name">Ismael Lucas Becker</p>
+              <p class="contact-meta">23 años &middot; Ingeniero en Computación</p>
+              <p class="contact-bio">
+                Soy <strong>game developer</strong> y <strong>fullstack developer</strong>. Me apasiona crear
+                experiencias de juego y construir software de punta a punta, desde el backend hasta el
+                front-end. Truco Online es un proyecto personal donde combino ambas cosas: un juego
+                multijugador y toda la infraestructura que lo sostiene.
+              </p>
+            </div>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:ismaelbecker90@gmail.com" class="contact-link">&#9993; ismaelbecker90@gmail.com</a>
+            <a href="https://www.linkedin.com/in/ismaelbecker13" target="_blank" rel="noopener" class="contact-link">in linkedin/ismaelbecker13</a>
+            <a href="https://www.instagram.com/ismaelbecker13" target="_blank" rel="noopener" class="contact-link">&#9737; instagram/ismaelbecker13</a>
+          </div>
+        </div>
+
+        <div class="card contact-card">
+          <h2 class="login-title">Contacto</h2>
+          <div class="contact-body">
+            <img class="contact-photo" src="developers/2.png" alt="Joaquin Sedoff" />
+            <div class="contact-info">
+              <p class="contact-name">Joaquin Sedoff</p>
+              <p class="contact-meta">23 años &middot; Estudiante avanzado de Ingeniería en Computación</p>
+              <p class="contact-bio">
+                Desarrollador Python y Fullstack apasionado por la infraestructura y los sistemas
+                distribuidos. Me especializo en conectar componentes backend y optimizar entornos
+                mediante contenedores. Para este juego aporté en el desarrollo de la lógica de
+                negocio y la integración de endpoints clave para las APIs del sistema.
+              </p>
+            </div>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:joasedoff@gmail.com" class="contact-link">&#9993; joasedoff@gmail.com</a>
+            <a href="https://www.linkedin.com/in/joaquin-sedoff-b0b91b219/" target="_blank" rel="noopener" class="contact-link">in linkedin/joaquin-sedoff</a>
+            <a href="https://www.instagram.com/joaquinsedoff" target="_blank" rel="noopener" class="contact-link">&#9737; instagram/joaquinsedoff</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mi Perfil (lo que ya se veía: tabla + editar perfil) -->
+      <div id="seccion-perfil" class="seccion" hidden>
+        <div class="card profile-card">
+          <h2 class="login-title">Mi Perfil</h2>
+          <div class="profile-head">
+            <img id="profile-avatar" class="profile-avatar" src="" alt="avatar" />
+            <div class="profile-info">
+              <span id="profile-name" class="profile-name"></span>
+              <span id="profile-exp" class="profile-exp"></span>
+            </div>
+          </div>
+
+          <div id="profile-view">
+            <button class="btn-modern" id="edit-profile-btn">Editar perfil</button>
+          </div>
+
+          <div id="profile-edit" hidden>
+            <button type="button" class="close-x" id="close-edit-btn" aria-label="Cerrar">&times;</button>
+            <p class="avatar-label">Cambiar foto de perfil</p>
+            <div class="avatar-grid" id="profile-avatars"></div>
+
+            <input class="input" id="edit-usuario" type="text" placeholder="Nuevo nombre de usuario" />
+            <input class="input" id="edit-contrasena" type="password" placeholder="Nueva contraseña (opcional)" autocomplete="new-password" />
+            <button class="btn-modern" id="save-profile-btn">Guardar cambios</button>
+            <button class="btn-modern btn-secondary" id="cancel-edit-btn">Cancelar</button>
+          </div>
+
+          <div class="alert" id="profile-msg" hidden></div>
+        </div>
+
+        <div class="card leaderboard-card">
+          <h2 class="login-title">Tabla de Posiciones</h2>
+          <table class="leaderboard">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Jugador</th>
+                <th>EXP</th>
+              </tr>
+            </thead>
+            <tbody id="leaderboard-body"></tbody>
+          </table>
+          <div class="alert" id="leaderboard-msg" hidden></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-disclaimer">
+        <strong>Truco Online</strong>es propiedad de <strong>Jumping Kingdom Studios</strong>.
+        Juego en desarrollo temprano: pueden existir errores o cambios sin previo aviso.
+        Uso bajo su propia responsabilidad. 
+        <strong>Todos los derechos resevados - Jumping Kingdom Studios 2026</strong>
+      </p>
+      <img class="footer-logo" src="/api/asset5.png" alt="Jumping Kingdom Studios" />
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=3"></script>
+</body>
+</html>
