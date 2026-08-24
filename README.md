@@ -38,7 +38,6 @@ El sistema está compuesto por un backend, un sitio web, el juego HTML5, una bas
 | Notificaciones | Telegram                  |
 
 El backend funciona como núcleo de la aplicación. Se encarga de la autenticación, la lógica del juego, la gestión de usuarios, las compras, las donaciones y la comunicación con Mercado Pago.
-
 El sitio web y el juego HTML5 son servidos directamente por el backend.
 
 ## Estructura del proyecto
