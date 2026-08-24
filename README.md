@@ -6,7 +6,7 @@ El proyecto combina el juego en tiempo real con una plataforma web que permite a
 
 La plataforma también incorpora un sistema de validación de pagos mediante webhooks y un sistema automatizado de reportes que permite recibir información sobre compras y donaciones a través de Telegram.
 
-EL proyecto se encuentra desplegado en: https://truco.jumpingkingdom.com/
+El proyecto se encuentra desplegado en: https://truco.jumpingkingdom.com/
 ## Características
 
 * Partidas multijugador de Truco en tiempo real.
